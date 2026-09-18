@@ -1,0 +1,6 @@
+interface:
+  display_name: "真人口播精剪"
+  short_description: "保留本人原声，自然精剪提速，配好读字幕、可见动效与真人封面，整理发布包"
+  default_prompt: "用 $edit-talking-head-social-video 处理我录好的口播，按我的自然原声、无底板字幕和可见语义动效规范完成剪辑及所需发布包。"
+policy:
+  allow_implicit_invocation: true
