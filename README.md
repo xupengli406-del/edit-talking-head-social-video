@@ -1,43 +1,24 @@
-# 真人口播全流程
+# 真人随手拍口播
 
-把口喷和零散想法整理成自然可录的稿子，用户确认并录制后，再处理成有视觉节奏的真人视频，按需求完成封面与发布包。原有技能标识与剪辑调用保持有效。
+**适合什么输入：** 想法、口喷草稿，或已经拍好的自拍、走路、固定机位等真人口播。
 
-## 使用
+**得到什么：** 可直接念的完整稿，或保留真实原声与人物现场的精剪成片、双语字幕、封面和四平台发布包；按本次需要交付。
 
-在已安装本技能的 Codex 中先提供口喷内容或想法：
+**什么时候选：** 观众主要看本人表情、现场和观点。即使坐在电脑前，也不因此改成录屏教程；不为放文字把全屏真人缩成资料小窗。
 
-```text
-用 $edit-talking-head-social-video 按我的口喷整理一版口播稿，保留我的观点和说话方式，查清记不准的信息，设计好开头；我确认后自己录制。
-```
+**从哪里开始：** 打开 [SKILL.md](SKILL.md)。只有想法先写稿；已有正式视频直接精剪；只改字幕、封面或某一段时保留其他已选内容。三秒真实钩子、V24及当前封面方向继续执行。
 
-录好后在同一项目提供视频，继续：
+原key `edit-talking-head-social-video` 继续有效。电脑界面、引用原片或资料承担主要解释时，在制作开始前一次分流至 `edit-screen-tutorial-video`；混合片按主任务选负责人，分段构图共用原声时轴。白板和访谈保留专项，不互相递归调用整套流程。
 
-```text
-用 $edit-talking-head-social-video 处理这个口播，按我的规范自然精剪、适度提速、加无底板字幕和可见语义动效，并整理所需发布包。
-```
+## 包内资源
 
-也支持只改字幕、封面或一段动效，保留其他已确认内容。
+- [布局](references/person-layout.md)、[动作](references/person-motion.md)、[分流](references/video-routing.md)。
+- [声音与剪辑](references/editing-and-audio.md)、[字幕](references/subtitles-and-motion.md)、[封面](references/covers-and-release.md)、[四平台交付](references/four-platform-delivery.md)。
+- [39方法与8配方](references/editing-methods/index.md)，含来源、授权、V24原子组件和校验脚本；原证据14文件仅作本地可选输入，不随公共包分发。来源/许可分别见方法模块、节奏MIT许可和源剪辑ORIGIN；不把来源媒体或无LICENSE上游代码统称MIT。
+- [源素材处理](references/source-editing.md)：四个模板自带common模块，默认当前工程或显式 `--workdir`。FFmpeg/FFprobe/Python、实际ASR所需Whisper及实际编辑器是显式工具条件，不携带原媒体、凭据或机器环境。
 
-## 规范入口
+## 维护共同规范
 
-- [SKILL.md](SKILL.md)：工作范围、流程与相关技能协作。
-- [用户要求与审美](references/user-requirements.md)：已确认要求、单期选择与补充建议分别记录。
-- [口播写稿](references/scriptwriting.md)：口喷整理、受众与观点、事实核实、自然语言、确认和录制后衔接。
-- [开头两秒与留存](references/opening-and-retention.md)：首句、首帧、声音起点、正文兑现和独立验收。
-- [内容目标与数据复盘](references/performance-review.md)：按内容用途设目标，记录实际制作选择，发布后区分留存、收获和关注表现，再调整下一期。
-- [剪辑与声音](references/editing-and-audio.md)：自然去气口、重说处理、保音高提速、原声与口型同步。
-- [字幕与动效](references/subtitles-and-motion.md)：语义换行、无底板字幕、实际可见的动作和手机尺度验收。
-- [封面与发布](references/covers-and-release.md)：选定真人形象、独立画幅构图、高分辨率排版与发布材料。
-- [验收与整理](references/review-and-handoff.md)：文件检查、实际观看/试听、版本选择及可恢复整理。
+本包是共同规范的唯一维护源。明确白名单见 `distribution/shared-video-manifest.json`；录屏包及其他消费者使用构建时生成的包内副本，运行时不读取兄弟Skill。维护后用 `scripts/sync_shared_video.py --target <目标> --profile <profile>` 生成；已有无lock的旧分发源须显式 `--adopt-existing`，已有副本被手改则拒绝覆盖。
 
-## 适用方式
-
-这是个人制作规范和执行指导，不是一个自带模型或视频引擎的软件包。实际编辑时读取当前可用工具和工程；本环境的视频制作由 HyperFrames 入口分配相应流程，用户指定其他工具时遵从用户选择。
-
-自然原声、清楚的主题、可读字幕、可见语义动效和真实接地气的人像是默认方向。倍率、颜色、画幅和具体动效按每条素材判断，不固定套模板。
-
-自动检查、主观试听和用户选定分别记录；文件通过校验不代表已完成整片听感验收。规范内的个人偏好与可恢复整理授权仅用于本用户的任务，其他使用者应按自己的要求调整。
-
-## 内置剪辑与字幕能力
-
-[39项方法与8组配方](references/editing-methods/index.md)、[节奏检查](references/visual-rhythm.md)、[V24行内组件](references/editing-methods/inline-emphasis.md)与[多段原素材处理](references/source-editing.md)均在本包；无需另装方法或节奏技能。来源证据清单保留作者、时间与SHA，14原媒体由本地项目提供，不随公共包分发。原素材模板的上游未附LICENSE，许可不自动改称MIT，见[来源记录](scripts/source_editing/ORIGIN.json)。
+派发给其他消费者时用 `--bundle-dir shared-video`；它们只读取所需参考，不继承真人或屏幕的完整流程。`--check --target <目标> --bundle-dir shared-video` 仅校验该目标自有文件，无需安装本包；构建维护时可加 `--compare-source <本包>` 比较源哈希。代码检查不表示视频视听通过或用户接受，实际成片按[质量标准](references/quality-standards.md)另查。
