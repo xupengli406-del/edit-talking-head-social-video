@@ -10,6 +10,10 @@
 
 原key `edit-talking-head-social-video` 继续有效。电脑界面、引用原片或资料承担主要解释时，在制作开始前一次分流至 `edit-screen-tutorial-video`；混合片按主任务选负责人，分段构图共用原声时轴。白板和访谈保留专项，不互相递归调用整套流程。
 
+## 看效果
+
+[开口交代，AI接着干](https://github.com/xupengli406-del/claude-skills/releases/download/video-skill-cases-2026-11-17/04-real-talking-head-ai-workflow.mp4)：45.034秒、1080×1920、30fps的真人随拍口播。输入是真实录像与原声，结果保留人物现场和表达，配中英双语字幕与关键词动效；从[案例说明](examples/ai-workflow/README.md)了解用自己的素材怎样开始。
+
 ## 包内资源
 
 - [布局](references/person-layout.md)、[动作](references/person-motion.md)、[分流](references/video-routing.md)。
