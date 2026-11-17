@@ -37,3 +37,7 @@
 自然原声、清楚的主题、可读字幕、可见语义动效和真实接地气的人像是默认方向。倍率、颜色、画幅和具体动效按每条素材判断，不固定套模板。
 
 自动检查、主观试听和用户选定分别记录；文件通过校验不代表已完成整片听感验收。规范内的个人偏好与可恢复整理授权仅用于本用户的任务，其他使用者应按自己的要求调整。
+
+## 内置剪辑与字幕能力
+
+[39项方法与8组配方](references/editing-methods/index.md)、[节奏检查](references/visual-rhythm.md)、[V24行内组件](references/editing-methods/inline-emphasis.md)与[多段原素材处理](references/source-editing.md)均在本包；无需另装方法或节奏技能。来源证据清单保留作者、时间与SHA，14原媒体由本地项目提供，不随公共包分发。原素材模板的上游未附LICENSE，许可不自动改称MIT，见[来源记录](scripts/source_editing/ORIGIN.json)。
